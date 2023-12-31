@@ -1,0 +1,23 @@
+{
+  "name": "mongodb-in-nodejs",
+  "version": "1.0.0",
+  "description": "a nodejs application related to mongodb operations",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bokare/NodeJs-MongoDB.git"
+  },
+  "author": "Vaibhav Bokare",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bokare/NodeJs-MongoDB/issues"
+  },
+  "homepage": "https://github.com/bokare/NodeJs-MongoDB#readme",
+  "dependencies": {
+    "mongoose": "^8.0.3",
+    "nodemon": "^3.0.2"
+  }
+}
