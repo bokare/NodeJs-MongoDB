@@ -3,10 +3,7 @@ let mongoose = require("mongoose");
 //  bun / dino / nodejs - runtime env for js
 //  npm / yarn - package managers
 
-mongoose
-  .connect(
-    "mongodb+srv://bokarev8:8087001312@cluster1.wd9jjdm.mongodb.net/chaiAurBackend"
-  )
+mongoose.connect("mongodb+srv://bokarev8:8087001312@cluster1.wd9jjdm.mongodb.net/chaiAurBackend")
   .then((result) => {
     console.log("Databse Connected !!");
     //   app.listen(port,()=>{
@@ -57,6 +54,74 @@ userModel.create(user)   // create document in db
 .then((data)=>{
     console.log(data);
     console.log("Data Inserted");
+})
+.catch((err)=>{
+    console.log(err);
+})
+
+// fetching data 
+userModel.find()
+.then((data)=>{
+    console.log(data);
+})
+.catch((err)=>{
+    console.log(err);
+})
+
+
+userModel.find({name:"Saurabh"})
+.then((data)=>{
+    console.log(data);
+})
+.catch((err)=>{
+    console.log(err);
+})
+
+
+userModel.findOne({name:"Saurabh"})
+.then((data)=>{
+    console.log(data);
+})
+.catch((err)=>{
+    console.log(err);
+})
+
+
+userModel.find().sort({age:-1})   // sort by age in descending order  | 1 for asc order
+.then((data)=>{
+    console.log(data);
+})
+.catch((err)=>{
+    console.log(err);
+})
+
+userModel.find().limit(2)
+.then((data)=>{
+    console.log(data);
+})
+.catch((err)=>{
+    console.log(err);
+})
+
+userModel.deleteOne({age:27})
+.then((info)=>{
+    console.log(info);
+})
+.catch((err)=>{
+    console.log(err);
+})
+
+userModel.deleteMany({name:"Saurabh"})
+.then((info)=>{
+    console.log(info);
+})
+.catch((err)=>{
+    console.log(err);
+})
+
+userModel.updateOne({name:"Thor Odinson"},{age:100})
+.then((info)=>{
+    console.log(info);
 })
 .catch((err)=>{
     console.log(err);
