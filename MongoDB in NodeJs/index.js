@@ -3,7 +3,7 @@ let mongoose = require("mongoose");
 //  bun / dino / nodejs - runtime env for js
 //  npm / yarn - package managers
 
-mongoose.connect("mongodb+srv://bokarev8:8087001312@cluster1.wd9jjdm.mongodb.net/chaiAurBackend")
+mongoose.connect("")
   .then((result) => {
     console.log("Databse Connected !!");
     //   app.listen(port,()=>{
